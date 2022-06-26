@@ -1,3 +1,4 @@
 # dotfiles
 
-Creating configs to smoothen linux worflow experience!
+making dotfiles to make good linux experience
+
