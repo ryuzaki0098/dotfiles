@@ -1,4 +1,3 @@
 # dotfiles
 
-making dotfiles to make good linux experience
-
+dotfiles for ricing
