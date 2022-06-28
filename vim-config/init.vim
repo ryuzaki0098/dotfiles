@@ -31,10 +31,9 @@ Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ryanoasis/vim-devicons'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
-"Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 
 call plug#end()
@@ -43,7 +42,7 @@ call plug#end()
 
 nmap <C-P> :FZF<CR>
 inoremap jk <ESC>
-nmap <C-z> :NERDTreeToggle<CR>
+nmap <C-Z> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -206,11 +205,11 @@ filetype plugin on
 " let g:multi_cursor_use_default_mapping=0
 
 " Default mapping
-" let g:multi_cursor_start_word_key      = '<C-n>'
-" let g:multi_cursor_select_all_word_key = '<A-n>'
-" let g:multi_cursor_start_key           = 'g<C-n>'
-" let g:multi_cursor_select_all_key      = 'g<A-n>'
-" let g:multi_cursor_next_key            = '<C-n>'
-" let g:multi_cursor_prev_key            = '<C-p>'
+" let g:multi_cursor_start_word_key      = '<C-e>'
+" let g:multi_cursor_select_all_word_key = '<A-e>'
+" let g:multi_cursor_start_key           = 'g<C-e>'
+" let g:multi_cursor_select_all_key      = 'g<A-e>'
+" let g:multi_cursor_next_key            = '<C-e>'
+" let g:multi_cursor_prev_key            = '<C-q>'
 " let g:multi_cursor_skip_key            = '<C-x>'
 " let g:multi_cursor_quit_key            = '<Esc>'
