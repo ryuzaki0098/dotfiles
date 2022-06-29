@@ -7,3 +7,6 @@ for plugings
 for Coc installs
   
    type " :CocInstall {package name} " in vim command mode
+
+
+   using Tabnine for code completion
