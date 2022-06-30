@@ -1,3 +1,4 @@
+" -------  General settings  ----------->
 : set number
 : set relativenumber
 : set autoindent
@@ -17,6 +18,9 @@
 : set hidden 
 : set updatetime=300
 : highlight Normal guibg = none
+
+
+" -------  Plugins using vim plug  ------------->
 
 call plug#begin('~/.config/vim/plugged')
 
@@ -40,6 +44,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 
 call plug#end()
+
+
+" --------  Key maps and configs  -------->
+
 
 "nerd tree key mapping
 
