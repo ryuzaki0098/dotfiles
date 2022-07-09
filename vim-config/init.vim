@@ -18,7 +18,7 @@
 : set hidden 
 : set updatetime=300
 : highlight Normal guibg = none
-
+: hi Normal guibg=NONE ctermbg=NONE
 
 " -------  Plugins using vim plug  ------------->
 
