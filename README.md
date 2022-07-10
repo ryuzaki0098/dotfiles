@@ -1,3 +1,3 @@
 # dotfiles
 
-dotfiles for ricing
+my configs 
