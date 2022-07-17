@@ -42,7 +42,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 
@@ -224,3 +224,9 @@ filetype plugin on
 " let g:multi_cursor_prev_key            = '<C-q>'
 " let g:multi_cursor_skip_key            = '<C-x>'
 " let g:multi_cursor_quit_key            = '<Esc>'
+
+
+" visual indentation like ide 
+"
+let g:indentLine_char = 'c'
+let g:indentLine_char_list = ['|' , '¦', '┆', '┊' ]
