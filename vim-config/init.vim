@@ -17,6 +17,7 @@
 : colorscheme pablo
 : set hidden 
 : set updatetime=300
+: set spell spelllang=en_us
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
