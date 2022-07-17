@@ -1,13 +1,18 @@
 # dotfiles
 
 Using vim-plug as a plugin manager
-For install pluging
+For installing plugins
+
+
  Type ":PlugInstall" in command mode in nvim
 
+
     
-using coc plugin for auto-completion and code-definition
+using coc plugin for lsp : auto-completion and code-definition
+
 
 Installing lsp using
+
  
    :Cocinstall <package name>
 
