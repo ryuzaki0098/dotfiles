@@ -1,12 +1,14 @@
 # dotfiles
 
-for plugings 
-  type " :PlugInstall " in vim command mode 
-    to install Plugins
+Using vim-plug as a plugin manager
+For install pluging
+ Type ":PlugInstall" in command mode in nvim
+
     
-for Coc installs
-  
-   type " :CocInstall {package name} " in vim command mode
+using coc plugin for auto-completion and code-definition
 
+Installing lsp using
+ 
+   :Cocinstall <package name>
 
-   using Tabnine for code completion
+Using "tabnine" for code generation can use "Kite"
