@@ -18,6 +18,7 @@
 : set hidden 
 : set updatetime=300
 : set spell spelllang=en_us
+: set clipboard=unnamedplus
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
@@ -48,6 +49,18 @@ call plug#end()
 
 
 " --------  Key maps and configs  -------->
+
+" ctrl+s = save
+nnoremap <C-S> :update<cr>
+
+" ctrl+q = quit
+nnoremap <C-Q> :quit<cr>
+
+"copy system wide
+vnoremap <C-C> "*y :let @+=@*<CR> 
+
+"paste from system wide
+nnoremap<C-p> "+p
 
 
 "nerd tree key mapping
