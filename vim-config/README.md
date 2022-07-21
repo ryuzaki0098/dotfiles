@@ -27,3 +27,13 @@ gc = commenting | works for multiple selected lines and supports all languages s
 Ctrl+s = save/write to file/buffer
 
 Ctrl+q = quitall nvim
+
+Ctrl+C = copy selection (copy to/from system wide)
+
+Ctrl+P = paste selection (paste to/from system wide)
+
+Ctrl+n = open nerd tree
+            press m to open options menu 
+            press ? for help menu
+
+Ctrl+p = fuzzy file finder
