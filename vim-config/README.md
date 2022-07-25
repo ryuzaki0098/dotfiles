@@ -16,7 +16,7 @@ Installing lsp using
  
    :Cocinstall <package name>
 
-Using "tabnine" for code generation can use "Kite"
+Using "tabnine" for code generation 
 
 
 
