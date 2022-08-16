@@ -14,7 +14,7 @@
 : set incsearch
 : set mouse=a
 : set encoding=UTF-8
-: colorscheme pablo
+: colorscheme pablo " change to your favorite colorscheme
 : set hidden 
 : set updatetime=300
 : set spell spelllang=en_us
@@ -244,3 +244,15 @@ filetype plugin on
 "
 let g:indentLine_char = 'c'
 let g:indentLine_char_list = ['|' , '¦', '┆', '┊' ]
+
+" use <tab> for trigger completion and navigate to the next completion>
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
