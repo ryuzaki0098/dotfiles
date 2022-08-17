@@ -9,15 +9,16 @@
 : set smarttab
 : set smartcase
 : set nu
-: set nohlsearch
+: set hlsearch
 : set hidden
 : set incsearch
 : set mouse=a
 : set encoding=UTF-8
-: colorscheme pablo " change to your favorite colorscheme
 : set hidden 
 : set updatetime=300
-: set spell spelllang=en_us
+: set background=dark
+: colorscheme murphy
+": set spell spelllang=en_us
 : set clipboard=unnamedplus
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
@@ -32,6 +33,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -67,7 +70,7 @@ nnoremap<C-p> "+p
 
 nmap <C-P> :FZF<CR>
 inoremap jk <ESC>
-nmap <C-Z> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -245,7 +248,7 @@ filetype plugin on
 let g:indentLine_char = 'c'
 let g:indentLine_char_list = ['|' , '¦', '┆', '┊' ]
 
-" use <tab> for trigger completion and navigate to the next completion>
+" use <tab> for trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -256,3 +259,5 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 
+" nerdtree display hidden files 
+let NERDTreeShowHidden=1
