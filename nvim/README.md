@@ -37,3 +37,5 @@ Ctrl+n = open nerd tree
             press ? for help menu
 
 Ctrl+p = fuzzy file finder
+Ctrl+x = coc-diagnostics
+ 
