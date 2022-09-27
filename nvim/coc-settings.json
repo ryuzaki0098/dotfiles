@@ -10,6 +10,6 @@
         "gopls",
         "javascriptreact",
         "typescript.tsx",
-        "graphql"
+        "graphql,"
     ]
 }

@@ -16,16 +16,15 @@
 : set encoding=UTF-8
 : set hidden 
 : set updatetime=300
-: set background=dark
-: colorscheme murphy
 ": set spell spelllang=en_us
 : set clipboard=unnamedplus
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
+
 " -------  Plugins using vim plug  ------------->
 
-call plug#begin('~/.config/vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -70,7 +69,7 @@ nnoremap<C-p> "+p
 
 nmap <C-P> :FZF<CR>
 inoremap jk <ESC>
-nmap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -155,6 +154,11 @@ nnoremap <silent> <c-j> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-}> :TmuxNavigatePrevious<cr>
 
+" -- Resize with arrows
+nnoremap <silent> <C-Up> :resize +2<CR>
+nnoremap <silent> <C-Down> :resize -2<CR>
+nnoremap <silent> <C-Left> :vertical resize -2<CR>
+nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
 
 " nerd customHighlighter config
@@ -268,8 +272,5 @@ inoremap <silent><expr> <Tab>
 " nerdtree display hidden files 
 let NERDTreeShowHidden=1
 
-lua << EOF
-    require("trouble").setup{
-
-    }
-EOF
+" coc-diagnostic 
+nnoremap <silent> <c-X> :CocDiagnostics<cr>
