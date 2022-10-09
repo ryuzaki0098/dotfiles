@@ -18,6 +18,7 @@
 : set updatetime=300
 ": set spell spelllang=en_us
 : set clipboard=unnamedplus
+: set laststatus=0
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
@@ -47,6 +48,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -274,3 +277,10 @@ let NERDTreeShowHidden=1
 
 " coc-diagnostic 
 nnoremap <silent> <c-X> :CocDiagnostics<cr>
+
+" vim airline 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_statusline_ontop=1
