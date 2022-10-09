@@ -39,4 +39,5 @@ Ctrl+n = open nerd tree
 Ctrl+p = fuzzy file finder
 
 Ctrl+x = coc-diagnostics
+Ctrl+{arrow keys for resize buffers}
  
