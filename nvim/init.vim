@@ -155,7 +155,7 @@ nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-k> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-j> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <c-}> :TmuxNavigatePrevious<cr>
+
 
 " -- Resize with arrows
 nnoremap <silent> <C-Up> :resize +2<CR>
@@ -163,6 +163,8 @@ nnoremap <silent> <C-Down> :resize -2<CR>
 nnoremap <silent> <C-Left> :vertical resize -2<CR>
 nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
+" buffer navigator 
+nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
 " nerd customHighlighter config
 
@@ -283,4 +285,4 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_statusline_ontop=1
+let g:airline_theme='jellybeans'
