@@ -19,6 +19,8 @@
 ": set spell spelllang=en_us
 : set clipboard=unnamedplus
 : set laststatus=0
+: set laststatus=2
+: set noshowmode
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
@@ -48,8 +50,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 
@@ -165,6 +168,8 @@ nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
 " buffer navigator 
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+" clear search string
+nnoremap <CR> :noh<CR><CR>
 
 " nerd customHighlighter config
 
@@ -280,9 +285,26 @@ let NERDTreeShowHidden=1
 " coc-diagnostic 
 nnoremap <silent> <c-X> :CocDiagnostics<cr>
 
-" vim airline 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='jellybeans'
+" " vim airline 
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#formatter = 'default'
+" let g:airline_theme='jellybeans'
+
+" vim lightline config
+if !has('gui_running')
+  set t_Co=256
+endif
+let g:lightline = {
+      \ 'colorscheme': 'molokai',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+
