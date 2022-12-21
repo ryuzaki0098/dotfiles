@@ -8,6 +8,7 @@
 : set shiftwidth=4
 : set smarttab
 : set smartcase
+: set scrolloff=5
 : set nu
 : set hlsearch
 : set hidden
@@ -24,6 +25,9 @@
 : highlight Normal guibg = none
 : hi Normal guibg=NONE ctermbg=NONE
 
+" # abbreviation set ; cause i'm tired of typing metadata
+: abbr _SH #!/bin/bash
+: abbr _PY #!/bin/bash/env python3
 
 " -------  Plugins using vim plug  ------------->
 
@@ -84,28 +88,28 @@ nmap ++ <plug>NERDCommenterToggle
 "
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+\ "Modified"  : "✹",
+\ "Staged"    : "✚",
+\ "Untracked" : "✭",
+\ "Renamed"   : "➜",
+\ "Unmerged"  : "═",
+\ "Deleted"   : "✖",
+\ "Dirty"     : "✗",
+\ "Clean"     : "✔︎",
+\ 'Ignored'   : '☒',
+\ "Unknown"   : "?"
+\ }
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeGitStatusNodeColorization = 1
 let g:NERDTreeColorMapCustom = {
-    \ "Modified"  : "#528AB3",  
-    \ "Staged"    : "#538B54",  
-    \ "Untracked" : "#BE5849",  
-    \ "Dirty"     : "#299999",  
-    \ "Clean"     : "#87939A",   
-    \ "Ignored"   : "#808080"   
-    \ }                         
+\ "Modified"  : "#528AB3",  
+\ "Staged"    : "#538B54",  
+\ "Untracked" : "#BE5849",  
+\ "Dirty"     : "#299999",  
+\ "Clean"     : "#87939A",   
+\ "Ignored"   : "#808080"   
+\ }                         
 
 "vim-prettier configs
 let g:prettier#autoformat_require_pragma = 0
@@ -151,21 +155,18 @@ let g:prettier#config#end_of_line = get(g:, 'prettier#config#end_of_line', 'lf')
 
 
 " Movement configs
- 
+
 let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-k> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-j> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-
-
-" -- Resize with arrows
-nnoremap <silent> <C-Up> :resize +2<CR>
-nnoremap <silent> <C-Down> :resize -2<CR>
-nnoremap <silent> <C-Left> :vertical resize -2<CR>
-nnoremap <silent> <C-Right> :vertical resize +2<CR>
-
+" window resize
+noremap <silent> <S-up> :resize +4<CR>
+noremap <silent> <S-down> :resize -4<CR>
+noremap <silent> <S-Left> :vertical resize +4<CR>
+noremap <silent> <S-Right> :vertical resize -4<CR>
 " buffer navigator 
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 " clear search string
@@ -284,13 +285,6 @@ let NERDTreeShowHidden=1
 
 " coc-diagnostic 
 nnoremap <silent> <c-X> :CocDiagnostics<cr>
-
-" " vim airline 
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#left_sep = ' '
-" let g:airline#extensions#tabline#left_alt_sep = '|'
-" let g:airline#extensions#tabline#formatter = 'default'
-" let g:airline_theme='jellybeans'
 
 " vim lightline config
 if !has('gui_running')
