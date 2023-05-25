@@ -1,29 +1,8 @@
 " -------  General settings  ----------->
-: set number
-: set relativenumber
-: set autoindent
-: set exrc
-: set expandtab
-: set tabstop=4
-: set shiftwidth=4
-: set smarttab
-: set smartcase
-: set scrolloff=5
-: set nu
-: set hlsearch
-: set hidden
-: set incsearch
-: set mouse=a
-: set encoding=UTF-8
-: set hidden 
-: set updatetime=300
+set number relativenumber autoindent exrc expandtab tabstop=4 shiftwidth=4 smarttab smartcase scrolloff=5 nu hlsearch hidden incsearch mouse=a encoding=UTF-8 hidden updatetime=300 clipboard=unnamedplus laststatus=0 laststatus=2 noshowmode
+highlight Normal guibg=none
+hi Normal guibg=NONE ctermbg=NONE
 ": set spell spelllang=en_us
-: set clipboard=unnamedplus
-: set laststatus=0
-: set laststatus=2
-: set noshowmode
-: highlight Normal guibg = none
-: hi Normal guibg=NONE ctermbg=NONE
 
 " # abbreviation set ; cause i'm tired of typing metadata
 : abbr _SH #!/bin/bash
